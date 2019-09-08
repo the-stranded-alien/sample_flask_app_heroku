@@ -1,0 +1,4 @@
+gunicorn==19.9.0
+requests==2.21.0
+Flask==0.10.1
+Flask_RESTful==0.2.12
