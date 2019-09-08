@@ -8,7 +8,7 @@ def home():
 
 @app.route('/predict')
 def predict():
-    return jsonify(["Prediction"])
+    return "Prediction"
 
 
 if __name__ == "__main__":
