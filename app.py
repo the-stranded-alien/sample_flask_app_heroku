@@ -6,9 +6,11 @@ app = Flask(__name__)
 def home():
     return "<h1>Flair Prediction Model As Microservice (API)</h1>"
 
-@app.route('/predict', methods=("GET", "POST"))
+@app.route('/predict', methods=["GET"])
 def predict():
-    return jsonify("Results")
+    if request.method == "GET":
+        return jsonify("Results")
+    return "<h1>Prediction</h1>"
 
 
 if __name__ == "__main__":
