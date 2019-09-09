@@ -8,9 +8,12 @@ def home():
 
 @app.route('/predict', methods=["GET"])
 def predict():
-    if request.method == "GET":
-        return jsonify("Results")
-    return "<h1>Prediction</h1>"
+    if 'post' in request.args:
+        Url = request.args['post']
+    else:
+        return "Error : No Post URL provided !"
+    
+    return str(Url)
 
 
 if __name__ == "__main__":
